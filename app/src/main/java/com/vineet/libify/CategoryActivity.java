@@ -5,17 +5,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
-public class MainActivity extends AppCompatActivity {
+public class CategoryActivity extends AppCompatActivity {
 
-    private static final String LOG_TAG = MainActivity.class.getSimpleName();
+    private static final String LOG_TAG = CategoryActivity.class.getSimpleName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        Log.d(LOG_TAG, "-------------");
-        Log.d(LOG_TAG, "onCreate");
+        setContentView(R.layout.activity_category);
     }
 
     @Override
@@ -52,6 +49,5 @@ public class MainActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         Log.d(LOG_TAG, "onDestroy");
-
     }
 }
