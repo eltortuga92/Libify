@@ -6,10 +6,10 @@
     android:layout_height="wrap_content"
     android:layout_weight="0.40"
     android:padding="6dp"
-    android:background="@color/color_bg_violet">
+    android:background="@color/colorPrimaryDark">
 
     <TextView
-        android:id="@+id/word"
+        android:id="@+id/category"
         style="@style/category_name" />
 
 </LinearLayout>

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="color_bg_yellow">#ffff99</color>
+    <color name="colorPrimary">#ffff99</color>
     <color name="color_bg_cyan_dark">#00574B</color>
-    <color name="color_bg_violet">#be9ee8</color>
-    <color name="color_accent_blue">#4c6aff</color>
-    <color name="color_text">#000</color>
+    <color name="colorAccent">#be9ee8</color>
+    <color name="colorPrimaryDark">#4c6aff</color>
+    <color name="colorText">#000</color>
 
-    <color name="color_card">#fff</color>
+    <color name="colorCard">#fff</color>
 </resources>
