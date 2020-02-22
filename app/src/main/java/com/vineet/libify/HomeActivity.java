@@ -30,13 +30,15 @@ public class HomeActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                int categoryListSize = mCategoryList.size();
+                mCategoryList.addLast("Category " + categoryListSize);
+                mRecyclerView.getAdapter().notifyItemInserted(categoryListSize);
+                mRecyclerView.smoothScrollToPosition(categoryListSize);
             }
         });
 
         for (int i = 0; i < 20; i++) {
-            mCategoryList.addLast("Category" + i);
+            mCategoryList.addLast("Category " + i);
         }
         // Get a handle to RecyclerView
         mRecyclerView = findViewById(R.id.recyclerview);

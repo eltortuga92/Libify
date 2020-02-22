@@ -39,7 +39,7 @@ public class CategoryListAdapter extends RecyclerView.Adapter<CategoryListAdapte
         return mCategoryList.size();
     }
 
-    class CategoryViewHolder extends RecyclerView.ViewHolder {
+    class CategoryViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         public final TextView categoryItemView;
         final CategoryListAdapter mAdapter;
 
@@ -47,6 +47,21 @@ public class CategoryListAdapter extends RecyclerView.Adapter<CategoryListAdapte
             super(itemView);
             categoryItemView = itemView.findViewById(R.id.category);
             this.mAdapter = adapter;
+            itemView.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View v) {
+            // Get the position of the clicked item
+            int mPosition = getLayoutPosition();
+
+            // get the clicked item using the postion
+            String element = mCategoryList.get(mPosition);
+
+            // change text
+            mCategoryList.set(mPosition, "Clicked! " + element);
+
+            mAdapter.notifyDataSetChanged();
         }
     }
 }
